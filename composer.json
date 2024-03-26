@@ -14,6 +14,7 @@
         "electrik/slate": "dev-development",
         "illuminate/support": "^11.0.8",
         "laravel/cashier": "^15.3",
+        "laravel/sanctum": "^4.0",
         "livewire/livewire": "^3.4",
         "mpociot/teamwork": "dev-l11-compatibility as 8.1.0",
         "rappasoft/laravel-livewire-tables": "^3.2",
