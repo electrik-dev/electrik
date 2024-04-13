@@ -1,16 +1,16 @@
 # Electrik
 
-Electrik is a full-featured and open-source stater-kit for for your next SaaS application. It's built on top of Laravel, Livewire, electrik/slate, Tailwind. 
+Electrik is a full-featured and open-source stater-kit for your next SaaS application. It's built on top of Laravel, Livewire, electrik/slate, Tailwind. 
 
 [![CI/CD workflow](https://github.com/electrikhq/electrik/actions/workflows/ci.yml/badge.svg)](https://github.com/electrikhq/electrik/actions/workflows/ci.yml) ![GitHub tag (latest SemVer pre-release)](https://img.shields.io/github/v/tag/electrikhq/electrik?include_prereleases) ![Packagist Downloads](https://img.shields.io/packagist/dt/electrik/electrik)  ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/electrikhq/electrik) ![GitHub](https://img.shields.io/github/license/electrikhq/electrik) 
 
 **IMPORTANT NOTE**
 
->Since Laravel 10 has been released, I am working on making Electrik compatible with L10.x. Currently, the packages Electrik uses as dependencies; some of them have not released 10x support. Hence, the current version 2.x of Electik is unstable. Till the time this issue is not resolved, I would suggest you either wait for the full 10.x support of use L9.x
+>Since Laravel 10 has been released, I am working on making Electrik compatible with L10.x. Currently, the packages Electrik uses as dependencies; some of them have not released 10x support. Hence, the current version 2.x of Electrik is unstable. Till the time this issue is not resolved, I would suggest you either wait for the full 10.x support of use L9.x
 
 <br/>
 
-![Dashboard](art/dashboard.png "Dashboard after succeffsulll installation").
+![Dashboard](art/dashboard.png "Dashboard after successful installation").
 
 Electrik supports:
 * Teams
@@ -22,7 +22,7 @@ Electrik supports:
 
 ## Why another Starter kit?
 
-It's true that there are a lot of starter kits available for SaaS applications. They all have great features. What saperates Electrik from any other start-kit out there is that its 100% open source. Electrik does not have tired pricing or pro features like almost every other start-kit out there provides and then asks for a premium for this. Electrik will always stay open source and free. Even for commerial usage.
+It's true that there are a lot of starter kits available for SaaS applications. They all have great features. What separates Electrik from any other start-kit out there is that its 100% open source. Electrik does not have tired pricing or pro features like almost every other start-kit out there provides and then asks for a premium for this. Electrik will always stay open source and free. Even for commercial usage.
 
 ## What's the catch?
 
@@ -36,10 +36,10 @@ To install electrik to your project, use the following steps:
 
 1. Create a fresh laravel application
 ```
-composer create-project laravel/laravel <awesome-saas-project> --prefer-dist
+composer create-project laravel/laravel:10.3.3 electrik --prefer-dist
 ```
 
-2. Requiire Electrik via composer
+2. Require Electrik via composer
 ```
 composer require electrik/electrik
 ```
