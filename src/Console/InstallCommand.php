@@ -181,6 +181,8 @@ EOF
         copy(__DIR__ . '/../../database/migrations/2022_09_29_090000_add_cols_to_team_invites_table.php', database_path('migrations/' . $timestamp . '_xx_add_cols_to_team_invites_table.php'));
         copy(__DIR__ . '/../../database/migrations/2022_10_02_1950170_add_display_names_to_roles_and_permissions.php', database_path('migrations/' . $timestamp . '_xx_add_display_names_to_roles_and_permissions.php'));
         copy(__DIR__ . '/../../database/migrations/2024_03_24_105924_create_world_database.php', database_path('migrations/' . $timestamp . '_xx_create_world_database.php'));
+        copy(__DIR__ . '/../../database/migrations/2024_03_26_112537_create_stripe_products_table.php', database_path('migrations/' . $timestamp . '_xx_create_stripe_products_table.php'));
+        copy(__DIR__ . '/../../database/migrations/2024_03_26_112601_create_stripe_plans_table.php', database_path('migrations/' . $timestamp . '_xx_112601_create_stripe_plans_table.php'));
         
         $this->components->info('Published Electrik migrations.');
         
