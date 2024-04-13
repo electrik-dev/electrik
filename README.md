@@ -36,7 +36,7 @@ To install electrik to your project, use the following steps:
 
 1. Create a fresh laravel application
 ```
-composer create-project laravel/laravel:10.3.3 electrik --prefer-dist
+composer create-project laravel/laravel:10.3.3 <awesome-saas-project> --prefer-dist
 ```
 
 2. Require Electrik via composer
