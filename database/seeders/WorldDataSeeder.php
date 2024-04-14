@@ -1,17 +1,24 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use App\Models\Country;
 use App\Models\State;
 use App\Models\City;
 
-class WorldDataSeeder extends Seeder
-{
-    public function run()
-    {
+class WorldDataSeeder extends Seeder {
+    
+    public function run(): void { 
+
+        ini_set('memory_limit', '256M');
+
         $path = database_path('json/world.json');
-        $data = json_decode(file_get_contents($path), true);
-        
+
+        $json = file_get_contents($path);
+
+        $data = json_decode(html_entity_decode(urldecode(htmlspecialchars($json))), true, 512, JSON_THROW_ON_ERROR);
+    
         foreach ($data as $countryData) {
             $country = Country::create([
                 'name' => $countryData['name'],

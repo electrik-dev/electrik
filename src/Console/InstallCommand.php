@@ -173,20 +173,22 @@ EOF
         $timestamp = date('Y_m_d_His', time());
 
         /* added x prefix to make sure our migrations run at the end */
-        copy(__DIR__ . '/../../database/migrations/2022_09_29_000000_add_cols_to_users_table.php', database_path('migrations/' . $timestamp . '_xx_add_cols_to_users_table.php'));
-        copy(__DIR__ . '/../../database/migrations/2022_09_29_000001_create_customer_columns.php', database_path('migrations/' . $timestamp . '_xx_create_customer_columns.php'));
-        copy(__DIR__ . '/../../database/migrations/2022_09_29_000002_update_subscriptions_table.php', database_path('migrations/' . $timestamp . '_xx_update_subscriptions_table.php'));
-        copy(__DIR__ . '/../../database/migrations/2022_09_29_063626_create_configurations_tables.php', database_path('migrations/' . $timestamp . '_xx_create_configurations_tables.php'));
-        copy(__DIR__ . '/../../database/migrations/2022_09_29_195017_create_addresses_table.php', database_path('migrations/' . $timestamp . '_xx_create_addresses_table.php'));
-        copy(__DIR__ . '/../../database/migrations/2022_09_29_090000_add_cols_to_team_invites_table.php', database_path('migrations/' . $timestamp . '_xx_add_cols_to_team_invites_table.php'));
-        copy(__DIR__ . '/../../database/migrations/2022_10_02_1950170_add_display_names_to_roles_and_permissions.php', database_path('migrations/' . $timestamp . '_xx_add_display_names_to_roles_and_permissions.php'));
-        copy(__DIR__ . '/../../database/migrations/2024_03_24_105924_create_world_database.php', database_path('migrations/' . $timestamp . '_xx_create_world_database.php'));
-        copy(__DIR__ . '/../../database/migrations/2024_03_26_112537_create_stripe_products_table.php', database_path('migrations/' . $timestamp . '_xx_create_stripe_products_table.php'));
-        copy(__DIR__ . '/../../database/migrations/2024_03_26_112601_create_stripe_plans_table.php', database_path('migrations/' . $timestamp . '_xx_112601_create_stripe_plans_table.php'));
+        copy(__DIR__ . '/../../database/migrations/2022_09_29_000000_add_cols_to_users_table.php', database_path('migrations/' . $timestamp++ . '_xx_add_cols_to_users_table.php'));
+        copy(__DIR__ . '/../../database/migrations/2022_09_29_000001_create_customer_columns.php', database_path('migrations/' . $timestamp++ . '_xx_create_customer_columns.php'));
+        copy(__DIR__ . '/../../database/migrations/2022_09_29_000002_update_subscriptions_table.php', database_path('migrations/' . $timestamp++ . '_xx_update_subscriptions_table.php'));
+        copy(__DIR__ . '/../../database/migrations/2022_09_29_063626_create_configurations_tables.php', database_path('migrations/' . $timestamp++ . '_xx_create_configurations_tables.php'));
+        copy(__DIR__ . '/../../database/migrations/2022_09_29_195017_create_addresses_table.php', database_path('migrations/' . $timestamp++ . '_xx_create_addresses_table.php'));
+        copy(__DIR__ . '/../../database/migrations/2022_09_29_090000_add_cols_to_team_invites_table.php', database_path('migrations/' . $timestamp++ . '_xx_add_cols_to_team_invites_table.php'));
+        copy(__DIR__ . '/../../database/migrations/2022_10_02_1950170_add_display_names_to_roles_and_permissions.php', database_path('migrations/' . $timestamp++ . '_xx_add_display_names_to_roles_and_permissions.php'));
+        copy(__DIR__ . '/../../database/migrations/2024_03_24_105924_create_world_database.php', database_path('migrations/' . $timestamp++ . '_xx_create_world_database.php'));
+        copy(__DIR__ . '/../../database/migrations/2024_03_26_112537_create_stripe_products_table.php', database_path('migrations/' . $timestamp++ . '_xx_create_stripe_products_table.php'));
+        copy(__DIR__ . '/../../database/migrations/2024_03_26_112601_create_stripe_plans_table.php', database_path('migrations/' . $timestamp++ . '_xx_112601_create_stripe_plans_table.php'));
         
         $this->components->info('Published Electrik migrations.');
         
         copy(__DIR__ . '/../../database/seeders/WorldDataSeeder.php', database_path('seeders/WorldDataSeeder.php'));
+        (new Filesystem)->ensureDirectoryExists(database_path('json'));
+        copy(__DIR__ . '/../../database/json/world.json', database_path('json/world.json'));
 
         $this->components->info('Published Electrik seeders.');
 
