@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('plans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained()->onDelete('cascade');
+            $table->foreignId('stripe_product_id')->constrained()->onDelete('cascade');
             $table->string('stripe_plan_id')->unique();
             $table->string('name');
             $table->integer('price'); // Store price in cents
