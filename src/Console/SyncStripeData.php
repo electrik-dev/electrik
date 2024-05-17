@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Stripe\Stripe;
 use Stripe\Product as StripeProduct;
 use Stripe\Price as StripePrice;
-use App\Models\Product;
+use App\Models\StripeProduct as StripeProductModel;
 use App\Models\Plan;
 
 class SyncStripeData extends Command
@@ -26,7 +26,7 @@ class SyncStripeData extends Command
         $this->info('Synchronizing products...');
         $stripeProducts = StripeProduct::all(["active" => true]);
         foreach ($stripeProducts->autoPagingIterator() as $stripeProduct) {
-            Product::updateOrCreate(
+            StripeProductModel::updateOrCreate(
                 ['stripe_product_id' => $stripeProduct->id],
                 [
                     'name' => $stripeProduct->name,
@@ -42,7 +42,7 @@ class SyncStripeData extends Command
             $plan = Plan::updateOrCreate(
                 ['stripe_plan_id' => $stripePrice->id],
                 [
-                    'product_id' => Product::where('stripe_product_id', $stripePrice->product)->first()->id,
+                    'product_id' => StripeProductModel::where('stripe_product_id', $stripePrice->product)->first()->id,
                     'name' => $stripePrice->nickname,
                     'price' => $stripePrice->unit_amount,
                     'currency' => $stripePrice->currency,
