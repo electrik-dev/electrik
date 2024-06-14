@@ -1,18 +1,19 @@
 <?php
 
-namespace DummyNamespace;
+namespace {{ namespace }};
 
 use Livewire\Component;
 use Usernotnull\Toast\Concerns\WireToast;
 
-class DummyClass extends Component {
+class {{ className }} extends Component {
 
 	use WireToast;
 
 	public function mount() {
+
 	}
 
 	public function render() {
-		return view('livewire.dashboard.index');
+		return view('livewire.{{ className }}');
 	}
 }
