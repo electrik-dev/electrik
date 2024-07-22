@@ -16,7 +16,7 @@
         "laravel/cashier": "^15.3",
         "laravel/sanctum": "^4.0",
         "livewire/livewire": "^3.4",
-        "mpociot/teamwork": "dev-l11-compatibility as 8.1.0",
+        "mpociot/teamwork": "9.0.0",
         "rappasoft/laravel-livewire-tables": "^3.2",
         "spatie/laravel-permission": "^6.4",
         "usernotnull/tall-toasts": "^2.1",
@@ -49,10 +49,6 @@
         }
     },
     "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/laravel-shift/teamwork.git"
-        }
     ],
     "minimum-stability": "dev",
     "prefer-stable": true
