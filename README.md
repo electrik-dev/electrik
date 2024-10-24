@@ -11,17 +11,17 @@ Electrik is a robust, fully-featured open-source starter kit designed to acceler
 
 <br/>
 
-![Dashboard](art/dashboard.png "Dashboard after succeffsulll installation").
+![Dashboard](art/dashboard.png "Dashboard after successful installation").
 
 ## 🌟 Features
 Electrik simplifies SaaS development with these core functionalities:
 
-Team Management: Build applications that support multiple users and teams out of the box.
-Subscription Billing: Integrated Stripe support for handling recurring billing.
-User Management: Robust user management capabilities to handle different user roles and permissions.
-Profile Management: Allow users to manage their profiles effortlessly.
-Scalable Dashboard: A minimalistic yet expandable dashboard.
-Open Source: Fully open source and free for both personal and commercial use.
+* Team Management: Build applications that support multiple users and teams out of the box.
+* Subscription Billing: Integrated Stripe support for handling recurring billing.
+* User Management: Robust user management capabilities to handle different user roles and permissions.
+* Profile Management: Allow users to manage their profiles effortlessly.
+* Scalable Dashboard: A minimalistic yet expandable dashboard.
+* Open Source: Fully open source and free for both personal and commercial use.
 
 ## 🚀 Quick Start
 
@@ -36,7 +36,7 @@ To install electrik to your project, use the following steps:
 composer create-project laravel/laravel <awesome-saas-project> --prefer-dist
 ```
 
-2. Requiire Electrik via composer
+2. Require Electrik via composer
 ```bash
 composer require electrik/electrik
 ```
@@ -46,17 +46,17 @@ composer require electrik/electrik
 php artisan electrik:install
 ```
 
-4. Start Artisan
+4. Start the development server
 ```bash
 php artisan serve
 ```
 
-That's all! Now goto [https://localhost:8000/dashboard](https://localhost:8000/dashboard) and enjoy!
+That's all! Now go to [https://localhost:8000/dashboard](https://localhost:8000/dashboard) and enjoy!
 
 
 ## Why another Starter kit?
 
-It's true that there are a lot of starter kits available for SaaS applications. They all have great features. What saperates Electrik from any other start-kit out there is that its 100% open source. Electrik does not have tired pricing or pro features like almost every other start-kit out there provides and then asks for a premium for this. Electrik will always stay open source and free. Even for commerial usage.
+It's true that there are a lot of starter kits available for SaaS applications. They all have great features. What seperates Electrik from any other starter kits out there is that it's 100% open source. Electrik does not have tired pricing or pro features like almost every other starter kit provides and then asks for a premium to use these features. Electrik will always stay open source and free. Even for commercial usage.
 
 ## What's the catch?
 
